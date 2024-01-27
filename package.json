@@ -5,9 +5,12 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "release": {},
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "test": "vitest run",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
