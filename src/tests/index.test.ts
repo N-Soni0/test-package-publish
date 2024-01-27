@@ -1,7 +1,10 @@
-import { describe, expect, it } from 'vitest'
+import { expect, test } from 'vitest'
+import { add, substract } from '..'
 
-describe('Anything', () => {
-    it('should pass CI', () => {
-        expect(1).toBe(1);
-    })
+test('Adds 12 + 30 to equal 42', () => {
+    expect(add(12, 30)).toBe(42);
+})
+
+test('Substracts 50 - 20 to equal 30', () => {
+    expect(substract(50, 20)).toBe(30);
 })
