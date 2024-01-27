@@ -10,7 +10,8 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "test": "vitest run",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build"
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
